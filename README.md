@@ -1,6 +1,7 @@
 
-Alt-Accesibilidad Web
-=====================
+Accesibilidad Web
+=================
+
 Presentación sobre aspectos básicos de Accesibilidad Web.
 
 ## Full setup
