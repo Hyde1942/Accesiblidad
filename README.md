@@ -1,17 +1,15 @@
 
-#Accesibilidad Web
-
+Alt-Accesibilidad Web
+=====================
 Presentación sobre aspectos básicos de Accesibilidad Web.
 
-### Full setup
-
-Some reveal.js features, like external Markdown and speaker notes, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.
+## Full setup
 
 1. Install [Node.js](http://nodejs.org/) (4.0.0 or later)
 
 1. Clone the reveal.js repository
    ```sh
-   $ git clone https://github.com/hakimel/reveal.js.git
+   $ git clone https://github.com/Hyde1942/Accesiblidad.git
    ```
 
 1. Navigate to the reveal.js folder
@@ -33,7 +31,7 @@ Some reveal.js features, like external Markdown and speaker notes, require that 
 
    You can change the port by using `npm start -- --port=8001`.
 
-### Folder Structure
+## Folder Structure
 
 - **css/** Core styles without which the project does not function
 - **js/** Like above but for JavaScript
