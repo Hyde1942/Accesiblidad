@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>Accesibilidad Web</h1>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment grow">Que es Accesibilidad Web?.</li>
+							<li class="fragment fade-in grow">
+								Discapacidades
+							</li>
+							<li class="fragment fade-in grow">Good Practices</li>
+							<li class="fragment fade-in grow">Testing & Tools</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<img src="images/pictures/tim-berners-lee.jpg" alt="Tim Berners Lee" />
+					</section>
+					<section>
+						<h2>Tim Berners-Lee</h2>
+						<p class="fragment fade-in">Padre de la World Wide Web. Basada en principios de libertad y abierta. Una Web Universal.</p>
+						<a class="fragment fade-in" href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">World Wide Web</a>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Que es la Accesibilidad Web?</h2>
+					</section>
+					<section>
+						<p>La Accesibilidad Web es simplmente garantizar que un sitio o servicio web este disponible para el mayor numero de personas.</p>
+						<p class="fragment fade-in">
+							La web esta basada en un principio de universalidad, no importa el hardware, software, lenguaje, cultura, geografia, habilidades fisicas o mentales.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Discapacidades</h2>
+						<ul>
+							<li class="fragment fade-in">Auditivas</li>
+							<li class="fragment fade-in">Visuales</li>
+							<li class="fragment fade-in">Cognitivas</li>
+							<li class="fragment fade-in">Motrices</li>
+							<li class="fragment fade-in">Derivadas del entorno</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>W3C WCAG 2.0 & 2.1</h2>
+					</section>
+					<section>
+						<ul>
+							<li>Perceptible</li>
+							<li>Operable</li>
+							<li>Entendible</li>
+							<li>Robusto</li>
+						</ul>
+					</section>
+					<section>
+
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Good Practices</h2>
+					</section>
+					<section>
+						<ul>
+							<li>HTML Best Practices & Land Marks</li>
+							<li class="fragment fade-in">CSS Tips & Tricks.</li>
+							<li class="fragment fade-in">JavaScript & WAI Aria</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Semantics & Landmarks</h2>
+					</section>
+					<section>
+						<pre>
+							<code class="html" data-trim data-line-numbers>
+							&lt;html lang="en-US"&gt;
+							 &lt;head&gt;
+							  &lt;title&gt;Titulo Descriptivos y unicos&lt;/title&gt;
+							 &lt;/head&gt;
+							 &lt;body&gt;
+							  &lt;div class="container"&gt;
+							   &lt;header&gt;
+							    &lt;nav&gt;...&lt;/nav&gt;
+							   &lt;/header&gt;
+							   &lt;main&gt;
+							    &lt;section&gt;
+							     &lt;article&gt;
+							     &lt;h1&gt;Lorem ipsum dolor sit amet consectetur&lt;/h1&gt;
+							     &lt;p&gt;Lorem ipsum dolor sit...&lt;/p&gt;
+							    &lt;/article&gt;
+							    &lt;/section&gt;
+							    &lt;section&gt;...&lt;/section&gt;
+							   &lt;/main&gt;
+							   &lt;footer&gt;...&lt;/footer&gt;
+							   &lt;/div&gt;
+							 &lt;/body&gt;
+							&lt;/html&gt;
+							</code>
+						</pre>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+			Reveal.addEventListener('fragmentshown',function(ev){
+				console.log(ev)
+				var oldFragment = document.querySelectorAll('.fragment.grow.visible')
+				if(oldFragment.length > 1) {
+					oldFragment[0].classList.remove('grow');
+				}
+			});
+
+			Reveal.addEventListener('fragmenthidden',function(event){
+				var visibleFragments = document.querySelectorAll('.fragment.visible');
+				visibleFragments.classList= 'fragment fade-in';
+			});
+		</script>
+	</body>
+</html>
