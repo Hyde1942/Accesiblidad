@@ -8,14 +8,14 @@ Presentación sobre aspectos básicos de Accesibilidad Web.
 
 1. Install [Node.js](http://nodejs.org/) (4.0.0 or later)
 
-1. Clone the reveal.js repository
+1. Clone the Accesiblidad repository
    ```sh
    $ git clone https://github.com/Hyde1942/Accesiblidad.git
    ```
 
-1. Navigate to the reveal.js folder
+1. Navigate to the Accesiblidad folder
    ```sh
-   $ cd reveal.js
+   $ cd Accesiblidad
    ```
 
 1. Install dependencies
