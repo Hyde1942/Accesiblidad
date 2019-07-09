@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Accesibilidad Web</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -31,41 +31,18 @@
 					</section>
 					<section>
 						<ul>
-							<li class="fragment grow">Que es Accesibilidad Web?.</li>
-							<li class="fragment fade-in grow">
-								Discapacidades
-							</li>
-							<li class="fragment fade-in grow">Good Practices</li>
-							<li class="fragment fade-in grow">Testing & Tools</li>
+							<li class="fragment fade-in">Discapacidades</li>
+							<li class="fragment">Qué es Accesibilidad Web?</li>
+							<li class="fragment fade-in">Implementación</li>
+							<li class="fragment fade-in">Testing & Tools</li>
 						</ul>
-					</section>
-				</section>
-				<section>
-					<section>
-						<img src="images/pictures/tim-berners-lee.jpg" alt="Tim Berners Lee" />
-					</section>
-					<section>
-						<h2>Tim Berners-Lee</h2>
-						<p class="fragment fade-in">Padre de la World Wide Web. Basada en principios de libertad y abierta. Una Web Universal.</p>
-						<a class="fragment fade-in" href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">World Wide Web</a>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>Que es la Accesibilidad Web?</h2>
-					</section>
-					<section>
-						<p>La Accesibilidad Web es simplmente garantizar que un sitio o servicio web este disponible para el mayor numero de personas.</p>
-						<p class="fragment fade-in">
-							La web esta basada en un principio de universalidad, no importa el hardware, software, lenguaje, cultura, geografia, habilidades fisicas o mentales.
-						</p>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Discapacidades</h2>
 						<ul>
-							<li class="fragment fade-in">Auditivas</li>
+							<li class="fragment">Auditivas</li>
 							<li class="fragment fade-in">Visuales</li>
 							<li class="fragment fade-in">Cognitivas</li>
 							<li class="fragment fade-in">Motrices</li>
@@ -75,27 +52,48 @@
 				</section>
 				<section>
 					<section>
-						<h2>W3C WCAG 2.0 & 2.1</h2>
+						<img src="images/pictures/tim-berners-lee.jpg" alt="Tim Berners Lee" />
 					</section>
 					<section>
-						<ul>
-							<li>Perceptible</li>
-							<li>Operable</li>
-							<li>Entendible</li>
-							<li>Robusto</li>
-						</ul>
-					</section>
-					<section>
-
+						<h2>Tim Berners-Lee</h2>
+						<blockquote class="fragment fade-in">The power of the Web is in its universality.
+							Access by everyone regardless of disability is an essential aspect.
+							Tim Berners-Lee, W3C Director and inventor of the <a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">World Wide Web</a></blockquote>
+							<p class="fragment fade-in">Lidera otro proyectos como la open web foundation <a href="https://webfoundation.org/" target="_blank">#ForTheWeb</a></p>
 					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Good Practices</h2>
+						<h2>Qué es la Accesibilidad Web?</h2>
+					</section>
+					<section>
+						<p>La Accesibilidad Web es simplmente garantizar que un sitio o servicio web este disponible para el mayor número de personas.</p>
+						<p class="fragment fade-in">
+							La web esta basada en un principio de universalidad, no importa el hardware, software, lenguaje, cultura, geografía, habilidades físicas o mentales.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>W3C WCAG 2.0 & 2.1</h2>
 					</section>
 					<section>
 						<ul>
-							<li>HTML Best Practices & Land Marks</li>
+							<li class="fragment">Perceptible</li>
+							<li class="fragment fade-in">Operable</li>
+							<li class="fragment fade-in">Entendible</li>
+							<li class="fragment fade-in">Robusto</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Implementación</h2>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment">Best Practices</li>
+							<li class="fragment fade-in">HTML & Landmarks</li>
 							<li class="fragment fade-in">CSS Tips & Tricks.</li>
 							<li class="fragment fade-in">JavaScript & WAI Aria</li>
 						</ul>
@@ -103,36 +101,280 @@
 				</section>
 				<section>
 					<section>
-						<h2>Semantics & Landmarks</h2>
+						<h2>Best Practices</h2>
+						<ul>
+							<li class="fragment">Buena Semántica (Orden Lógico)</li>
+							<li class="fragment fade-in">Títulos únicos y descriptivos</li>
+							<li class="fragment fade-in">Definir el lenguaje correcto</li>
+							<li class="fragment fade-in">Evitar constrains (Zoom)</li>
+							<li class="fragment fade-in">Facilitar el uso del Teclado</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>HTML & Landmarks</h2>
+						<p></p>
 					</section>
 					<section>
+							<pre>
+								<code class="html" data-trim data-line-numbers>
+								&lt;!doctype html&gt;
+								&lt;html lang="es-CR"&gt;
+								 &lt;head&gt;
+								  &lt;title&gt;Titulo Descriptivos y unicos&lt;/title&gt;
+								 &lt;/head&gt;
+								 &lt;body&gt;
+								  &lt;div class="container"&gt;
+								   &lt;header&gt;
+									&lt;nav&gt;...&lt;/nav&gt;
+								   &lt;/header&gt;
+								   &lt;main&gt;
+									&lt;section&gt;
+									 &lt;article&gt;
+									 &lt;h1&gt;Lorem ipsum dolor sit amet consectetur&lt;/h1&gt;
+									 &lt;p&gt;Lorem ipsum dolor sit...&lt;/p&gt;
+									&lt;/article&gt;
+									&lt;/section&gt;
+									&lt;section&gt;...&lt;/section&gt;
+								   &lt;/main&gt;
+								   &lt;footer&gt;...&lt;/footer&gt;
+								   &lt;/div&gt;
+								 &lt;/body&gt;
+								&lt;/html&gt;
+								</code>
+							</pre>
+						</section>
+						<section>
+						<table class="data">
+							<tbody><tr>
+							<th scope="col">HTML 5</th>
+							<th scope="col">ARIA Role</th>
+							</tr>
+							<tr>
+							<td><code>&lt;header&gt;</code></td>
+							<td><code>role="banner"</code></td>
+							</tr>
+							<tr>
+							<td><code>&lt;nav&gt;</code></td>
+							<td><code>role="navigation"</code></td>
+							</tr>
+							<tr>
+							<td><code>&lt;main&gt;</code></td>
+							<td><code>role="main"</code></td>
+							</tr>
+							<tr>
+							<td><code>&lt;footer&gt;</code></td>
+							<td><code>role="contentinfo"</code></td>
+							</tr>
+							<tr>
+							<td><code>&lt;aside&gt;</code></td>
+							<td><code>role="complementary"</code></td>
+							</tr>
+							<tr>
+							<td><code>&lt;section&gt;</code></td>
+							<td><code>role="region"</code> *</td>
+							</tr>
+							<tr>
+							<td><code>&lt;article&gt;</code></td>
+							<td><code>role="article"</code> *</td>
+							</tr>
+						</tbody></table>
+						</section>
+						<section>
+							<h2>Headings</h2>
+							<ul>
+								<li>Utilizarlos para organizar el contenido.Usuarios los utilizan para navegar el contenido.</li>
+								<li class="fragment fade-in">Mantener un orden lógico. Solamente un H1 por página.</li>
+								<li class="fragment fade-in">Los Titulos sean breves, únicos y descriptivos</li>
+							</ul>
+						</section>
+						<section>
+							<pre>
+								<code class="html" data-trim data-line-numbers>
+								&lt;main&gt;
+								 &lt;aside&gt;...&lt;/aside&gt;
+								 &lt;article&gt;
+								  &lt;h1&gt;Lorem ipsum dolor, sit amet consectetur&lt;/h1&gt;
+								  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem...&lt;/p&gt;
+								  &lt;h2&gt;consectetur adipisicing&lt;/h2&gt;
+								  &lt;h3&gt;dolor sit amet&lt;/h3&gt;
+								  &lt;h4&gt;adipisicing elit&lt;/h4&gt;
+								  &lt;!-- reset... --&gt;
+								  &lt;h2&gt;consectetur adipisicing&lt;/h2&gt;
+								  &lt;h3&gt;dolor sit amet&lt;/h3&gt;
+								  &lt;h4&gt;adipisicing elit&lt;/h4&gt;
+								 &lt;/article&gt;
+								&lt;/main&gt;
+								</code>
+							</pre>
+						</section>
+						<section>
+							<h2>Imagenes</h2>
+							<p>Tienen que tener un alt tag descriptivo pero no demasiado largo. En el caso de tener que suministrar una descripción mas detallada utilizar otro metodo, como ARIA para suministrar la descripción.</p>
+							<pre><code class="html" data-trim data-line-numbers>
+									&lt;img src="images/path.jpg" alt="Descripcion 250 max" /&gt;
+								</code></pre>
+							<p>Para las images decorativas se tiene que poner un alt tag vacio.</p>
+							<pre><code class="html" data-trim data-line-numbers>
+									&lt;img src="images/path.jpg" alt="" role="presentation" /&gt;
+								</code></pre>
+						</section>
+						<section>
+							<h2>Interaciones</h2>
+							<ul>
+								<li>Formularios</li>
+								<li class="fragment fade-in">tablas</li>
+								<li class="fragment fade-in">otros recursos de multimedia (audio/video)</li>
+								<li class="fragment fade-in">Interactividad/funcionalidad con JavaScript</li>
+							</ul>
+						</section>
+						<section>
+							<div style="border:1px solid gray; padding: 30px;">
+								<details close="">
+								<summary>Cum perspiciatis placeat obcaecati?</summary>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus alias sequi laboriosam. Modi, enim nulla. Cum perspiciatis placeat obcaecati aut!</p>
+								</details> 
+							
+							</div>
+						</section>
+				</section>
+				<section>
+					<section>
+						<h2>CSS</h2>
+					</section>
+					<section>
+						<ul>
+							<li>Contraste y Color</li>
+							<li class="fragment fade-in">Font Size y Line Height</li>
+							<li class="fragment fade-in">Flexbox (Lógical Order)</li>
+							<li class="fragment fade-in">Tips & Tricks</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Contraste y Color</h2>
+						<p class="fragment fade-in"><strong>&quot;Contraste&quot;</strong> son colores en segmentos opuestos de la rueda del color.</p>
+						<p class="fragment fade-in">Para cumplir la normativa AA, El contraste minímo de un texto debe ser 4:5</p>
+						<p class="fragment fade-in">Para cumplir la normativa AAA, El contraste minímo de un texto debe ser 7:5</p>
+					</section>
+					<section>
+						<h2>Font-size & Line Height</h2>
+						<p class="fragment fade-in">
+							El font-size del texto del página debería setearse en un valor entre los 15px - 20px. De acuerdo con la W3C el line-height debería ser 1.5 veces el tamaño del line spacing. También el largo de los textos de no debería de exceder los 85 carácteres.
+						</p>
+					</section>
+					<section>
+							<pre>
+								<code data-trim data-line-numbers>
+										.p {
+											font-size: 1em;
+											max-width: 65ch; /* Limits paragraph width */
+											line-height: 1.5;
+										}
+								</code>
+							</pre>
+						</section>
+					<section>
+						<h2>Flexbox</h2>
+						<p class="fragment fade-in">Es un nuevo módulo en CSS. El cual define un nuevo tipo de elemento con el property <q>display:flex</q>. El objectivo del Flexbox es permitir acomodar items flexibles dentro de un contendor flexible.</p>
+						<p class="fragment fade-in">También nos permite definir un Orden, para cada uno de los items dentro del contenedor. Lo que nos viene muy bien en el tema de Accesibilidad. Y mantener un orden lógico.</p>
+					</section>
+					<section>
+						<div class="flexbox-example-1">
+							<div>1</div>
+							<div>2</div>
+							<div>3</div>
+						</div>
 						<pre>
-							<code class="html" data-trim data-line-numbers>
-							&lt;html lang="en-US"&gt;
-							 &lt;head&gt;
-							  &lt;title&gt;Titulo Descriptivos y unicos&lt;/title&gt;
-							 &lt;/head&gt;
-							 &lt;body&gt;
-							  &lt;div class="container"&gt;
-							   &lt;header&gt;
-							    &lt;nav&gt;...&lt;/nav&gt;
-							   &lt;/header&gt;
-							   &lt;main&gt;
-							    &lt;section&gt;
-							     &lt;article&gt;
-							     &lt;h1&gt;Lorem ipsum dolor sit amet consectetur&lt;/h1&gt;
-							     &lt;p&gt;Lorem ipsum dolor sit...&lt;/p&gt;
-							    &lt;/article&gt;
-							    &lt;/section&gt;
-							    &lt;section&gt;...&lt;/section&gt;
-							   &lt;/main&gt;
-							   &lt;footer&gt;...&lt;/footer&gt;
-							   &lt;/div&gt;
-							 &lt;/body&gt;
-							&lt;/html&gt;
+							<code data-trim data-line-numbers>
+								&lt;div class="flexbox-example"&gt;
+								 &lt;div&gt;1&lt;/div&gt;
+								 &lt;div&gt;2&lt;/div&gt;
+								 &lt;div&gt;3&lt;/div&gt;
+								&lt;/div&gt;
+							</code>
+							<code data-trim data-line-numbers>
+								.flexbox-example  {
+								 display: flex;
+								 flex-direction: row-reverse;
+								}
 							</code>
 						</pre>
 					</section>
+					<section>
+					 <div class="flexbox-example-2">
+						<div class="item-1">1</div>
+						<div class="item-2">2</div>
+						<div class="item-3">3</div>
+					 </div>
+					 <pre>
+						 <code data-trim data-line-numbers>
+							 .item-1 {order:3}
+							 .item-2 {order:1}
+							 .item-3 {order:2}
+						 </code>
+					 </pre>
+					</section>
+					<section>
+						<h2>Practical Example</h2>
+					<pre>
+						<code data-trim data-line-numbers>
+						&lt;div class="wrapper"&gt;
+						 &lt;header class="header"&gt;Header&lt;/header&gt;
+						 &lt;article class="main"&gt;
+						 &lt;p&gt;...&lt;/p&gt;  
+						 &lt;/article&gt;
+						 &lt;aside class="aside aside-1"&gt;Aside 1&lt;/aside&gt;
+						 &lt;aside class="aside aside-2"&gt;Aside 2&lt;/aside&gt;
+						 &lt;footer class="footer"&gt;Footer&lt;/footer&gt;
+						&lt;/div&gt;
+						</code>
+					</pre>
+					</section>
+					<section>
+					<div class="wrapper">
+						<header class="header">Header</header>
+						<article class="main">
+							<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>  
+						</article>
+						<aside class="aside aside-1">Aside 1</aside>
+						<aside class="aside aside-2">Aside 2</aside>
+						<footer class="footer">Footer</footer>
+					</div>
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-line-numbers>
+							.wrapper {
+							  display: flex;  
+							  flex-flow: row wrap;
+							}
+							.wrapper > * {
+							  padding: 10px;
+							  flex: 1 100%;
+							}
+							@media all and (min-width: 600px) {
+							  .aside { flex: 1 0 0; }
+							}  
+							@media all and (min-width: 800px) {
+							  .main    { flex: 3 0px; }
+							  .aside-1 { order: 1; } 
+							  .main    { order: 2; }
+							  .aside-2 { order: 3; }
+							  .footer  { order: 4; }
+							}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Tips & Tricks</h2>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>JavaScript & ARIA</h2>
+					</section>
+					<section></section>
 				</section>
 			</div>
 		</div>
@@ -152,16 +394,9 @@
 				]
 			});
 			Reveal.addEventListener('fragmentshown',function(ev){
-				console.log(ev)
-				var oldFragment = document.querySelectorAll('.fragment.grow.visible')
-				if(oldFragment.length > 1) {
-					oldFragment[0].classList.remove('grow');
-				}
 			});
 
 			Reveal.addEventListener('fragmenthidden',function(event){
-				var visibleFragments = document.querySelectorAll('.fragment.visible');
-				visibleFragments.classList= 'fragment fade-in';
 			});
 		</script>
 	</body>

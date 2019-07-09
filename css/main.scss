@@ -1,0 +1,85 @@
+.reveal {
+	pre {
+		code.html {
+			max-height: initial;
+		}
+	}
+}
+
+.cm-65 {
+    max-width: 65ch;
+    line-height: 1.5 !important;
+    font-size: 1em;
+}
+
+.no-style {
+    max-width: initial;
+    line-height: initial;
+    font-size: 1em;
+}
+
+[class*="flexbox-example"] > div {
+    border:1px solid white;
+    width: 30%;
+}
+.flexbox-example-1  {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flexbox-example-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-1 {order:3}
+.item-2 {order:1}
+.item-3 {order:2}
+
+
+// Flexbox Demo taken from CSS Tricks
+
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+  }
+  
+  .header {
+    background: tomato;
+  }
+  
+  .footer {
+    background: lightgreen;
+  }
+  
+  .main {
+    text-align: left;
+    background: deepskyblue;
+  }
+  
+  .aside-1 {
+    background: gold;
+  }
+  
+  .aside-2 {
+    background: hotpink;
+  }
+  
+  @media all and (min-width: 600px) {
+    .aside { flex: 1 0 0; }
+  }
+  
+  @media all and (min-width: 800px) {
+    .main    { flex: 3 0px; }
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+  }

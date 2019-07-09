@@ -1769,11 +1769,4 @@ $notesWidthPercent: 25%;
 
 
 //presentation styles
-
-.reveal {
-	pre {
-		code.html {
-			max-height: initial;
-		}
-	}
-}
+@import "main.scss";
