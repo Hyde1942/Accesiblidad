@@ -95,7 +95,7 @@
 							<li class="fragment">Best Practices</li>
 							<li class="fragment fade-in">HTML & Landmarks</li>
 							<li class="fragment fade-in">CSS Tips & Tricks.</li>
-							<li class="fragment fade-in">JavaScript & WAI Aria</li>
+							<li class="fragment fade-in">JavaScript & ARIA</li>
 						</ul>
 					</section>
 				</section>
@@ -266,11 +266,11 @@
 					<section>
 							<pre>
 								<code data-trim data-line-numbers>
-										.p {
-											font-size: 1em;
-											max-width: 65ch; /* Limits paragraph width */
-											line-height: 1.5;
-										}
+								.p {
+									font-size: 1em;
+									max-width: 65ch; /* Limits paragraph width */
+									line-height: 1.5;
+								}
 								</code>
 							</pre>
 						</section>
@@ -373,8 +373,26 @@
 				<section>
 					<section>
 						<h2>JavaScript & ARIA</h2>
+						<p class="fragment fade-in">Accessible Rich Internet Applications <strong>(ARIA)</strong>. Es una serie de propiedades que se añadieron a la especificación de HTML, para hacer las aplicaciones y el contendido web (JavaScript) más accesible.</p>
+						<p class="fragment fade-in">Aria se compone de tres grandes pilares</p>
+						<ul>
+							<li class="fragment fade-in">Role</li>
+							<li class="fragment fade-in">States</li>
+							<li class="fragment fade-in">Properties</li>
+						</ul>
 					</section>
-					<section></section>
+					<section>
+						<h2>Role</h2>
+						<p class="fragment fade-in">Role, describe elementos o widgets que no forman parte de la especificación de HTML 4. Como lo son por ejemplo, slider, menubar, tabs, dialog, etc.</p>
+					</section>
+					<section>
+						<h2>States</h2>
+						<p class="fragment fade-in">Informa del el estado actual del widget a la teconlogia assertiva (Screen Reader). Por ejemplo, si esta visible, selecionado, deshabilitado, etc</p>
+					</section>
+					<section>
+						<h2>Properties</h2>
+						<p class="fragment fade-in">Describen propiedades del widget. Por ejemplo si es arrastrable, si el campo es requerido, etc.</p>
+					</section>
 				</section>
 			</div>
 		</div>
@@ -396,7 +414,7 @@
 			Reveal.addEventListener('fragmentshown',function(ev){
 			});
 
-			Reveal.addEventListener('fragmenthidden',function(event){
+			Reveal.addEventListener('fragmenthidden',function(ev){
 			});
 		</script>
 	</body>

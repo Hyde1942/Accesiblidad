@@ -142,7 +142,7 @@ module.exports = grunt => {
 				tasks: 'css-themes'
 			},
 			css: {
-				files: [ 'css/reveal.scss' ],
+				files: [ 'css/*.scss' ],
 				tasks: 'css-core'
 			},
 			test: {
