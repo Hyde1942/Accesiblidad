@@ -1705,3 +1705,6 @@ body {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4; } }
+
+td > pre {
+  width: 100% !important; }

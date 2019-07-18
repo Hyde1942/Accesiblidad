@@ -391,11 +391,78 @@
 					</section>
 					<section>
 						<h2>States</h2>
-						<p class="fragment fade-in">Informa del el estado actual del widget a la teconlogia assertiva (Screen Reader). Por ejemplo, si esta visible, selecionado, deshabilitado, etc</p>
+						<p class="fragment fade-in">Informa del el estado actual del widget a la tecnologia assertiva (Screen Reader). Por ejemplo, si esta visible, selecionado, deshabilitado, etc</p>
 					</section>
 					<section>
 						<h2>Properties</h2>
 						<p class="fragment fade-in">Describen propiedades del widget. Por ejemplo si es arrastrable, si el campo es requerido, etc.</p>
+					</section>
+					<section>
+						<h2>Live Regions</h2>
+						<p>Nos permiten anunciar a los usuarios de screen reader algo sin necesidad que el usuario intervenga. Esto es muy útil a la hora de manejar updates de una API, AJAX (XHR), validaciones.</p>
+						<ul>
+							<li class="fragment fade-in">Assertive: Se interrumpe cualquier acción que el usuario este realizando y se anuncia lo que se incluya en el live region</li>
+							<li class="fragment fade-in">Polite: Se pone el anuncio en un queue. Esperando que se termine de realizar la accion que el usuario esta realizando; Y después se realiza el anuncio.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Code Examples</h2>
+						<p>Es importante que el live Region se encuentre en el DOM al momento del load de la página. Ya que el screen reader tiene que registrar y mantener track del container que sirve como Live Region.</p>
+						<pre>
+							<code data-trim data-line-numbers>
+								&lt;div aria-live="polite"&gt;&lt;/div&gt;
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Live Region Modificadores</h2>
+						<table class="data">
+							<tbody><tr>
+							<th scope="col">Aria property</th>
+							<th scope="col">values</th>
+							</tr>
+							<tr>
+							<td><pre><code data-trim>aria-atomic</code></pre></td>
+							<td><pre><code class="hljs yaml" data-trim>true || false</code></pre></td>
+							</tr>
+							<tr>
+								<td><pre><code data-trim>aria-relevant</code></pre></td>
+								<td><pre><code class="hljs yaml" data-trim>all || additions || removals || text</code></pre></td>
+							</tr>
+							<tr>
+								<td><pre><code>aria-busy</code></pre></td>
+								<td><pre><code class="hljs yaml">true || false</code></pre></td>
+							</tr>
+						</tbody></table>
+					</section>
+					<section>
+						<h2>Otros tipos de live Regions</h2>
+						<table class="data">
+							<tbody><tr>
+							<th scope="col">Aria Role</th>
+							<th scope="col">Descripción</th>
+							</tr>
+							<tr>
+							<td><pre><code data-trim>role="alert"</code></pre></td>
+							<td><pre><code>aria-live="assertive"</code></pre></td>
+							</tr>
+							<tr>
+								<td><pre><code data-trim>role="status"</code></pre></td>
+								<td><pre><code data-trim>aria-live="polite" && aria-atomic="true"</code></pre></td>
+							</tr>
+							<tr>
+								<td><pre><code>role="timer"</code></pre></td>
+								<td><pre><code data-trim>aria-live="off"</code></pre></td>
+							</tr>
+							<tr>
+								<td><pre><code>role="marquee"</code></pre></td>
+								<td><pre><code data-trim>aria-live="off"</code></pre></td>
+							</tr>
+							<tr>
+								<td><pre><code>role="log"</code></pre></td>
+								<td><pre><code>Event Tracking</code></pre></td>
+							</tr>
+						</tbody></table>
 					</section>
 				</section>
 			</div>
