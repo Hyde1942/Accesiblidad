@@ -1708,3 +1708,79 @@ body {
 
 td > pre {
   width: 100% !important; }
+
+table.font-small pre {
+  font-size: 0.45em; }
+
+ul li {
+  list-style-type: none; }
+
+section.black {
+  color: #000; }
+
+.emoji::before {
+  font-size: 0.9em;
+  margin-right: 0.5em; }
+
+.emoji-big {
+  font-size: 4em; }
+
+.all1y::before {
+  content: '\267F'; }
+
+.question::before {
+  content: '\2753'; }
+
+.computer::before {
+  content: '\1F4BB'; }
+
+.testing::before {
+  content: '\1F527'; }
+
+.enviroment::before {
+  content: '\1F506'; }
+
+.eyeglasses::before {
+  content: '\1F453'; }
+
+.eyes::before {
+  content: '\1F440'; }
+
+.ear::before {
+  content: '\1F442'; }
+
+.nowalk::before {
+  content: '\1F6B7'; }
+
+.think::before {
+  content: "\1F4AD"; }
+
+.universal::before {
+  content: '\1F30E'; }
+
+.people-group-1::before {
+  content: '\1F46C'; }
+
+.people-group-2::before {
+  content: '\1F46D'; }
+
+.people-group-3::before {
+  content: '\1F46B'; }
+
+.keyboard::before {
+  content: '\1F3B9'; }
+
+.understandable::before {
+  content: '\1F481'; }
+
+.robust::before {
+  content: '\23F3'; }
+
+.bestPractices::before {
+  content: '\2714'; }
+
+.oldSchool::before {
+  content: '\1F47E'; }
+
+.dont::before {
+  content: '\2716'; }
