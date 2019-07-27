@@ -1,8 +1,9 @@
 .reveal {
 	pre {
-		code.html {
-			max-height: initial;
-		}
+    background-color: #272822;
+    code {
+      max-height: initial !important;
+    }
 	}
 }
 

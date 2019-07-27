@@ -56,7 +56,7 @@
 					</section>
 					<section data-background="#795548">
 						<h2>Tim Berners-Lee</h2>
-						<blockquote class="fragment fade-in">The power of the Web is in its <strong class="fragment highlight-red">universality</strong>.
+						<blockquote class="fragment fade-in">The power of the Web is in its <strong class="fragment highlight-green">universality</strong>.
 							Access by everyone regardless of disability is an essential aspect.
 							Tim Berners-Lee, W3C Director and inventor of the <a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">World Wide Web</a></blockquote>
 							<p class="fragment fade-in">Lidera otro proyectos como la open web foundation <a href="https://webfoundation.org/" target="_blank">#ForTheWeb</a><br><span class="universal emoji"></span></p>
@@ -114,7 +114,7 @@
 						<h2>HTML & Landmarks</h2>
 						<p></p>
 					</section>
-					<section>
+					<section data-background="#ffc107">
 							<pre>
 								<code class="html" data-trim data-line-numbers>
 								&lt;!doctype html&gt;
@@ -137,7 +137,7 @@
 								</code>
 							</pre>
 						</section>
-						<section>
+						<section data-background="#ff5722">
 							<h2>Headings</h2>
 							<ul>
 								<li>Utilizarlos para organizar el contenido. Usuarios los utilizan para navegar el contenido.</li>
@@ -145,7 +145,7 @@
 								<li class="fragment fade-in">Los Titulos sean breves, únicos y descriptivos</li>
 							</ul>
 						</section>
-						<section>
+						<section data-background="#ffc107">
 							<pre>
 								<code class="html" data-trim data-line-numbers>
 								&lt;main&gt;
@@ -165,18 +165,43 @@
 								</code>
 							</pre>
 						</section>
-						<section>
+						<section data-background="#ffc107">
 							<h2>Imagenes</h2>
 							<p>Tienen que tener un alt tag descriptivo pero no demasiado largo. En el caso de tener que suministrar una descripción mas detallada utilizar otro metodo, como ARIA para suministrar la descripción.</p>
 							<pre><code class="html" data-trim data-line-numbers>
-									&lt;img src="images/path.jpg" alt="Descripcion 250 max" /&gt;
+									&lt;img src="images/path.jpg" alt="Descripcion 125ch max" /&gt;
 								</code></pre>
 							<p>Para las images decorativas se tiene que poner un alt tag vacio.</p>
 							<pre><code class="html" data-trim data-line-numbers>
 									&lt;img src="images/path.jpg" alt="" role="presentation" /&gt;
 								</code></pre>
 						</section>
-						<section>
+						<section data-background="#ff5722">
+							<p>En el caso de imagenes mas complejas, como Infografics, diagramas de flujo, etc. Suministrar una descripcion mas detallada usando:</p>
+							<ul>
+								<li>Longdesc</li>
+								<li>figure & figcaption</li>
+								<li>Aria describedby & Aria labelledby</li>
+							</ul>
+						</section>
+						<section data-background="#ffc107">
+							<h2>longdesc Examples</h2>
+							<pre>
+								<code data-trim data-line-numbers>
+								&lt;p&gt;
+								 &lt;img src="chart.gif" alt="a complex chart" longdesc="chartdesc.html"/&gt;
+								&lt;/p&gt;
+								<!-- Dentro Misma página-->
+								&lt;img longdesc="thispage.html#desc" alt="Line graph of the number of subscribers" src="http://www.company/images/graph.png"&gt;
+								&lt;div id="desc"&gt;
+								&lt;h3&gt;Long Description: Line graph of the number of subscribers&lt;/h3&gt;
+								&lt;!-- Full Description of Graph --&gt;
+								&lt;p&gt;Long description ends.&lt;/p&gt;
+								&lt;/div&gt;
+								</code>
+							</pre>
+						</section>
+						<section data-background="#ff5722">
 							<h2>Interaciones</h2>
 							<ul>
 								<li>Formularios</li>
@@ -184,15 +209,6 @@
 								<li class="fragment fade-in">Otros recursos de multimedia (audio/video)</li>
 								<li class="fragment fade-in">Interactividad/funcionalidad con JavaScript</li>
 							</ul>
-						</section>
-						<section>
-							<div style="border:1px solid gray; padding: 30px;">
-								<details close="">
-								<summary>Cum perspiciatis placeat obcaecati?</summary>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus alias sequi laboriosam. Modi, enim nulla. Cum perspiciatis placeat obcaecati aut!</p>
-								</details> 
-							
-							</div>
 						</section>
 				</section>
 				<section>
@@ -218,7 +234,7 @@
 							El font-size del texto del página debería setearse en un valor entre los 15px - 20px. De acuerdo con la W3C el line-height debería ser 1.5 veces el tamaño del line spacing. También el largo de los textos de no debería de exceder los 85 carácteres.
 						</p>
 					</section>
-					<section>
+					<section data-background="##ffc107">
 							<pre>
 								<code data-trim data-line-numbers>
 								.p {

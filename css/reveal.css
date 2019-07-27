@@ -1597,8 +1597,10 @@ body {
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
 
-.reveal pre code.html {
-  max-height: initial; }
+.reveal pre {
+  background-color: #272822; }
+  .reveal pre code {
+    max-height: initial !important; }
 
 .cm-65 {
   max-width: 65ch;
