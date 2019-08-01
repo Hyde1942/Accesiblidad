@@ -137,6 +137,21 @@
 								</code>
 							</pre>
 						</section>
+						<section>
+							<h2>focus management</h2>
+							<pre>
+								<code data-trim data-line-numbers>
+									 tabindex="0"   <!--Elemento es puesto en Tab Order -->
+									 tabindex="-1"  <!-- Elemento no esta en el Tab Order pero es focusable via Scripting -->
+									 tabindex="1"   <!-- Elemento con un order mayor a 1. Hay que manejar toda la jerarquía.   -->
+								</code>
+							</pre>
+							<pre>
+									<code data-trim data-line-numbers>
+										$('#DOMNODE').focus();
+									</code>
+								</pre>
+						</section>
 						<section data-background="#ff5722">
 							<h2>Headings</h2>
 							<ul>
@@ -178,11 +193,6 @@
 						</section>
 						<section data-background="#ff5722">
 							<p>En el caso de imagenes mas complejas, como Infografics, diagramas de flujo, etc. Suministrar una descripcion mas detallada usando:</p>
-							<ul>
-								<li>Longdesc</li>
-								<li>figure & figcaption</li>
-								<li>Aria describedby & Aria labelledby</li>
-							</ul>
 						</section>
 						<section data-background="#ffc107">
 							<h2>longdesc Examples</h2>
@@ -201,14 +211,34 @@
 								</code>
 							</pre>
 						</section>
+						<section data-background="#ffc107">
+								<h2>Figure & figcaption</h2>
+								<figure>
+									<img src="images/examples/figure_example.jpg" alt="landscape with a tree">
+									<figcaption>Landscape with a tree</figcaption>
+								</figure>
+							</section>
+							<section data-background="#ffc107">
+							  <pre>
+								<code data-trim data-line-numbers>
+								 &lt;figure&gt;
+								  &lt;img src="images/examples/figure_example.jpg" alt="landscape with a tree"&gt;
+								  &lt;figcaption&gt;Landscape with a tree&lt;/figcaption&gt;
+								  &lt;/figure&gt;
+								 </code>
+								</pre>
+							</section>
 						<section data-background="#ff5722">
-							<h2>Interaciones</h2>
-							<ul>
-								<li>Formularios</li>
-								<li class="fragment fade-in">Tablas</li>
-								<li class="fragment fade-in">Otros recursos de multimedia (audio/video)</li>
-								<li class="fragment fade-in">Interactividad/funcionalidad con JavaScript</li>
-							</ul>
+						 <h2>Aria describedby</h2>
+						 <figure>
+								<img src="images/examples/info.jpg" alt="landscape with a tree">
+							</figure>
+						 <pre>
+							 <code data-trim data-line-numbers>
+								<img src="images/examples/info.jpg" alt="" aria-describedby="graphicDescription">
+								<p id="graphicDescription">Lorem ipsum dolor...</p>
+							 </code>
+						 </pre>
 						</section>
 				</section>
 				<section>
@@ -220,6 +250,7 @@
 							<li>Contraste y Color</li>
 							<li class="fragment fade-in">Font Size y Line Height</li>
 							<li class="fragment fade-in">Flexbox (Lógical Order)</li>
+							<li class="fragment fade-in">Visibility & Accesiblity informacion Tree</li>
 						</ul>
 					</section>
 					<section>
@@ -337,11 +368,32 @@
 							</code>
 						</pre>
 					</section>
+					<section>
+						<button aria-label="informacion screen reader">Visibility Hidden vs Visible</button>
+						<pre>
+							<code data-trim data-line-numbers>
+								/*.sr-only*/
+								.visually-hidden { 
+									border: 0;
+									clip: rect(0 0 0 0);
+									height: 1px;
+									margin: -1px;
+									overflow: hidden;
+									padding: 0;
+									position: absolute;
+									width: 1px;
+								}
+								.display-none {display:none;}
+								.visibility-hidden {Visibility: hidden;}
+								.opacity {opacity: 0}
+							</code>
+						</pre>
+					</section>
 				</section>
 				<section>
 					<section>
 							<h2>JavaScript & ARIA</h2>
-							<blockquote class="fragment fade-in">No ARIA is better than Bad ARIA</blockquote>
+							<blockquote class="fragment fade-in"><span class="fragment highlight-green">No ARIA</span> is better than <span class="fragment highlight-red">Bad ARIA</span></blockquote>
 							<blockquote class="fragment fade-in">Never use ARIA unless you have to. Always use ARIA when you have to. Probably, You are doing it wrong!.</blockquote>
 					</section>
 					<section>

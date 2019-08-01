@@ -1,12 +1,14 @@
 .reveal {
 	pre {
     background-color: #272822;
+    display: table !important;
+    table-layout: fixed;
+    max-width: 100%;
     code {
       max-height: initial !important;
     }
 	}
 }
-
 .cm-65 {
     max-width: 65ch;
     line-height: 1.5 !important;
@@ -96,6 +98,28 @@
   ul li {
     list-style-type: none;
   }
+
+  figure {
+   background-color: #000;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 220px;
+    margin: auto;
+}
+
+img {
+    max-width: 220px;
+    max-height: 150px;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
 
 section.black {
   color:#000;
