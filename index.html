@@ -137,21 +137,6 @@
 								</code>
 							</pre>
 						</section>
-						<section>
-							<h2>focus management</h2>
-							<pre>
-								<code data-trim data-line-numbers>
-									 tabindex="0"   <!--Elemento es puesto en Tab Order -->
-									 tabindex="-1"  <!-- Elemento no esta en el Tab Order pero es focusable via Scripting -->
-									 tabindex="1"   <!-- Elemento con un order mayor a 1. Hay que manejar toda la jerarquía.   -->
-								</code>
-							</pre>
-							<pre>
-									<code data-trim data-line-numbers>
-										$('#DOMNODE').focus();
-									</code>
-								</pre>
-						</section>
 						<section data-background="#ff5722">
 							<h2>Headings</h2>
 							<ul>
@@ -386,6 +371,38 @@
 								.display-none {display:none;}
 								.visibility-hidden {Visibility: hidden;}
 								.opacity {opacity: 0}
+							</code>
+						</pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>focus management</h2>
+					<pre>
+						<code data-trim data-line-numbers>
+							 tabindex="0"   <!--Elemento es puesto en Tab Order -->
+							 tabindex="-1"  <!-- Elemento no esta en el Tab Order pero es focusable via Scripting -->
+							 tabindex="1"   <!-- Elemento con un order mayor a 1. Hay que manejar toda la jerarquía.   -->
+						</code>
+					</pre>
+					<pre>
+							<code data-trim data-line-numbers>
+								$('#DOMNODE').focus();
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Focus Tricks</h2>
+						<pre>
+							<code data-trim data-line-numbers>
+								//Vanilla JS
+								document.body.addEventListener('focusin', (event) => {
+									console.log(document.activeElement)
+								})
+								//jQuery
+								$(document).on('keydown',function(){
+									console.log($(':focus')[0]);
+								})
 							</code>
 						</pre>
 					</section>
