@@ -4,6 +4,7 @@
     display: table !important;
     table-layout: fixed;
     max-width: 100%;
+    margin: 5px 0 !important;
     code {
       max-height: initial !important;
     }
@@ -20,9 +21,11 @@
     line-height: initial;
     font-size: 1em;
 }
-
+[class*="flexbox-example"] {
+  margin-bottom: 25px;
+}
 [class*="flexbox-example"] > div {
-    border:1px solid white;
+    border:1px solid black;
     width: 30%;
 }
 .flexbox-example-1  {
@@ -120,10 +123,6 @@ figcaption {
     padding: 3px;
     text-align: center;
 }
-
-section.black {
-  color:#000;
-}
   .emoji::before {
     font-size: 0.9em;
     margin-right: 0.5em;
@@ -196,3 +195,58 @@ section.black {
   .dont::before {
     content: '\2716';
   }
+  .love::before {
+    content: '\1F49D';
+    font-size: 4em;
+  }
+  @-webkit-keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  .pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+  }
+
+  .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  
