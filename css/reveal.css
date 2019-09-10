@@ -1620,7 +1620,7 @@ body {
   margin-bottom: 25px; }
 
 [class*="flexbox-example"] > div {
-  border: 1px solid black;
+  border: 5px solid black;
   width: 30%; }
 
 .flexbox-example-1 {
@@ -1630,7 +1630,9 @@ body {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse; }
+          flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 .flexbox-example-2 {
   display: -webkit-box;
@@ -1639,7 +1641,9 @@ body {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 .item-1 {
   -webkit-box-ordinal-group: 4;

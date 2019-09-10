@@ -29,9 +29,19 @@
 					<section>
 						<h1>Accesibilidad Web</h1>
 					</section>
+					<section data-background="#9e9e9e">
+						<img src="images/pictures/tim-berners-lee.jpg" alt="Tim Berners Lee" />
+					</section>
+					<section data-background="#795548">
+						<h2>Tim Berners-Lee</h2>
+						<blockquote class="fragment fade-in">The power of the Web is in its <strong class="fragment highlight-green">universality</strong>.
+							Access by everyone regardless of disability is an essential aspect.
+							Tim Berners-Lee, W3C Director and inventor of the <a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">World Wide Web</a></blockquote>
+							<p class="fragment fade-in">Lidera otro proyectos como la open web foundation <a href="https://webfoundation.org/" target="_blank">#ForTheWeb</a><br><span class="universal emoji"></span></p>
+					</section>
 					<section data-background="#795548">
 						<ul>
-							<li class="all1y emoji fragment fade-in">Discapacidades</li>
+							<li class="all1y emoji">Discapacidades</li>
 							<li class="question emoji fragment">Qué es Accesibilidad Web?</li>
 							<li class="computer emoji fragment fade-in">Implementación</li>
 							<li class="testing emoji fragment fade-in">Testing & Tools</li>
@@ -49,17 +59,11 @@
 							<li class="enviroment emoji fragment fade-in">Derivadas del entorno</li>
 						</ul>
 					</section>
-				</section>
-				<section>
-					<section data-background="#9e9e9e">
-						<img src="images/pictures/tim-berners-lee.jpg" alt="Tim Berners Lee" />
-					</section>
 					<section data-background="#795548">
-						<h2>Tim Berners-Lee</h2>
-						<blockquote class="fragment fade-in">The power of the Web is in its <strong class="fragment highlight-green">universality</strong>.
-							Access by everyone regardless of disability is an essential aspect.
-							Tim Berners-Lee, W3C Director and inventor of the <a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">World Wide Web</a></blockquote>
-							<p class="fragment fade-in">Lidera otro proyectos como la open web foundation <a href="https://webfoundation.org/" target="_blank">#ForTheWeb</a><br><span class="universal emoji"></span></p>
+						<h2>Meet Victor</h2>
+						<a href="https://www.youtube.com/watch?time_continue=8&v=LdVlbO7_hz8" target="_blank">Understanding the diversity of users</a><br>
+						<a href="https://www.youtube.com/watch?time_continue=10&v=QW_dUs9D1oQ" target="_blank" class="fragment fade-in">Using a Screen Reader</a><br>
+						<a href="https://www.youtube.com/watch?time_continue=6&v=M2Xz2mLFw3Q" target="_blank" class="fragment fade-in">Focus on what really matters!</a>
 					</section>
 				</section>
 				<section>
@@ -75,7 +79,7 @@
 					<section>
 						<h2>W3C WCAG 2.0 & 2.1</h2>
 					</section>
-					<section data-background="#e91e63">
+					<section data-background="#795548">
 						<ul>
 							<li class="universal emoji fragment">Perceptible</li>
 							<li class="keyboard emoji fragment fade-in">Operable</li>
@@ -98,7 +102,7 @@
 					</section>
 				</section>
 				<section>
-					<section data-background="#e91e63">
+					<section data-background="#795548">
 						<h2>Best Practices</h2>
 						<ul>
 							<li class="bestPractices emoji fragment">Buena Semántica (Orden Lógico)</li>
@@ -137,7 +141,7 @@
 								</code>
 							</pre>
 						</section>
-						<section data-background="#e91e63">
+						<section data-background="#795548">
 							<h2>Headings</h2>
 							<ul>
 								<li>Utilizarlos para organizar el contenido. Usuarios los utilizan para navegar el contenido.</li>
@@ -176,7 +180,7 @@
 									&lt;img src="images/path.jpg" alt="" role="presentation" /&gt;
 								</code></pre>
 						</section>
-						<section data-background="#e91e63">
+						<section data-background="#795548">
 							<p>En el caso de imagenes mas complejas, como Infografics, diagramas de flujo, etc. Suministrar una descripcion mas detallada usando:</p>
 						</section>
 						<section data-background="#ffc107">
@@ -213,7 +217,7 @@
 								 </code>
 								</pre>
 							</section>
-						<section data-background="#e91e63">
+						<section data-background="#795548">
 						 <h2>Aria describedby</h2>
 						 <figure>
 								<img src="images/examples/info.jpg" alt="landscape with a tree">
@@ -225,12 +229,27 @@
 							 </code>
 						 </pre>
 						</section>
+						<section data-background="#795548">
+							<h2>Button Vs Link</h2>
+							<p>Usar los links para enlazar páginas, o contenido dentro la misma página.</p>
+							<p>Usar los bottones para realizar acciones.</p>
+						</section>
+						<section data-background="#795548">
+							<h2>Examples</h2>
+							<pre>
+								<code data-line-numbers data-trim>
+									<!-- Anti Patterns-->
+									<a href="#" class="btn-primary">Menu</a>
+									<a class="btn-primary" onclick="somestuff()"></a>
+								</code>
+							</pre>
+						</section>
 				</section>
 				<section>
 					<section>
 						<h2>CSS</h2>
 					</section>
-					<section data-background="#e91e63">
+					<section data-background="#795548">
 						<ul>
 							<li>Contraste y Color</li>
 							<li class="fragment fade-in">Font Size y Line Height</li>
@@ -238,13 +257,13 @@
 							<li class="fragment fade-in">Visibility & Accesiblity informacion Tree</li>
 						</ul>
 					</section>
-					<section data-background="#e91e63">
+					<section data-background="#795548">
 						<h2>Contraste y Color</h2>
 						<p class="fragment fade-in"><strong>&quot;Contraste&quot;</strong> son colores en segmentos opuestos de la rueda del color.</p>
-						<p class="fragment fade-in">Para cumplir la normativa AA, El contraste minímo de un texto normal debe ser 4:5</p>
-						<p class="fragment fade-in">Para cumplir la normativa AAA, El contraste minímo de un texto debe ser 7:5</p>
+						<p class="fragment fade-in">Para cumplir la normativa AA, El contraste minímo de un texto normal debe ser 4:5:1</p>
+						<p class="fragment fade-in">Para cumplir la normativa AAA, El contraste minímo de un texto debe ser 7:1</p>
 					</section>
-					<section data-background="#e91e63">
+					<section data-background="#795548">
 						<h2>Font-size & Line Height</h2>
 						<p class="fragment fade-in">
 							El font-size del texto del página debería setearse en un valor entre los 15px - 20px. De acuerdo con la W3C el line-height debería ser 1.5 veces el tamaño del line spacing. También el largo de los textos de no debería de exceder los 85 carácteres.
@@ -261,7 +280,7 @@
 								</code>
 							</pre>
 						</section>
-					<section data-background="#e91e63">
+					<section data-background="#795548">
 						<h2>Flexbox</h2>
 						<p class="fragment fade-in">Es un nuevo módulo en CSS. El cual define un nuevo tipo de elemento con el property <q>display:flex</q>. El objectivo del Flexbox es permitir acomodar items flexibles dentro de un contendor flexible.</p>
 						<p class="fragment fade-in">También nos permite definir un Orden, para cada uno de los items dentro del contenedor. Lo que nos viene muy bien en el tema de Accesibilidad. Y mantener un orden lógico.</p>
@@ -302,7 +321,7 @@
 						 </code>
 					 </pre>
 					</section>
-					<section data-background="#e91e63">
+					<section data-background="#795548">
 						<h2>Practical Example</h2>
 					<pre>
 						<code data-trim data-line-numbers>
@@ -376,7 +395,7 @@
 					</section>
 				</section>
 				<section>
-					<section>
+					<section data-background="#ffc107">
 						<h2>focus management</h2>
 					<pre>
 						<code data-trim data-line-numbers>
@@ -384,12 +403,8 @@
 							 tabindex="-1"  <!-- Focusable Via Scripting -->
 							 tabindex="1"   <!-- Da prioridad. Hay que Manejar toda la jerarquía. -->
 						</code>
+						<code>$('#DOMNODE').focus();</code>
 					</pre>
-					<pre>
-							<code data-trim data-line-numbers>
-								$('#DOMNODE').focus();
-							</code>
-						</pre>
 					</section>
 					<section data-background="#ffc107">
 						<h2>Focus Tricks</h2>
@@ -413,7 +428,7 @@
 							<h2>JavaScript & ARIA</h2>
 							<blockquote class="fragment fade-in"><span class="fragment highlight-green">No ARIA</span> is better than <span class="fragment highlight-red">Bad ARIA</span></blockquote>
 					</section>
-					<section data-background="#e91e63">
+					<section data-background="#795548">
 						<p class="fragment fade-in">Accessible Rich Internet Applications <strong>(WAI-ARIA 1.1)</strong>. Es una serie de propiedades que se añadieron a la especificación de HTML, para hacer las aplicaciones y el contendido web (JavaScript) más accesible.</p>
 						<p class="fragment fade-in">ARIA se compone de tres grandes pilares</p>
 						<ul>
@@ -422,12 +437,12 @@
 							<li class="fragment fade-in">Properties</li>
 						</ul>
 					</section>
-					<section data-background="#e91e63">
+					<section data-background="#795548">
 						<h2>Role</h2>
 						<p class="fragment fade-in">Role, describe una serie de elementos abstractos, widgets, landmarks, live regions, etc. Que no forman parte de la especificación de HTML 4. Los elementos abstractos no sé deben usar. Y los demás hay que entender ARIA para poder usuarlos.</p>
 					</section>
 					<section data-background="#ffc107">
-						<table class="data font-small">
+						<table class="data font-regular">
 							<tbody><tr>
 							<th scope="col">HTML 5</th>
 							<th scope="col">ARIA Role</th>
